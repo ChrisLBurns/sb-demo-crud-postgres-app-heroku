@@ -22,7 +22,7 @@ public class EmployeeController {
     }
 
     //get a single employee
-    @GetMapping("/employee/{id}")
+    @GetMapping("/getEmployee/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long employeeId)
         throws ResourceNotFoundException {
         Employee employee = employeeRepository.findById(employeeId).orElseThrow(() ->
